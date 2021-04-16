@@ -34,6 +34,8 @@ public class UserController {
        if (userBean==null){
            return new ResultInfo(false,"登录失败，用户或者密码错误！");
        }else{
+
+           //放到session里面
             request.getSession().setAttribute("ub", userBean);
            return new ResultInfo(true,"登录成功");
        }
